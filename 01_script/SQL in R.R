@@ -2,7 +2,7 @@
 librarian::shelf(tidyverse, snakecase)
 
 # Load data
-polymorphisme <- read.delim("~/SQL/polymorphisme.csv")
+polymorphisme <- read.delim("./02_data/polymorphisme.csv")
 
 # Creat allele_uid
 allele_filter <- polymorphisme %>%
@@ -62,4 +62,4 @@ char
 
 librarian::shelf(DBI, RPostgres)
 # Connect to the default postgres database
-con <- dbConnect(RPostgres::Postgres())
+con <- dbConnect(RPostgres::Postgres(dbname = ))
